@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bembridge Fort Trust | Hidden Wartime Stories Uncovered</title>
+    <meta name="description"
+        content="A project aiming to uncover the hidden histories of Bembridge Fort and its surrounding defences on the Isle of Wight.">
+    <!-- British typography inspiration via Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .story-card {
+            background-color: #0c0e11;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .story-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(200, 165, 94, 0.2);
+            border-color: var(--accent-color);
+        }
+
+        .card-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            filter: grayscale(80%) sepia(20%) contrast(1.1);
+            transition: filter 0.3s ease;
+        }
+
+        .story-card:hover .card-image {
+            filter: grayscale(0%) sepia(0%) contrast(1.0);
+        }
+
+        .card-content {
+            padding: 1.5rem;
+            flex: 1;
+        }
+
+        .card-content h3 {
+            font-family: var(--font-heading);
+            color: var(--accent-color);
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-content p {
+            font-size: 0.95rem;
+            color: #a1a1aa;
+            margin-bottom: 1rem;
+        }
+
+        .btn-outline {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .story-card:hover .btn-outline {
+            background-color: var(--accent-color);
+            color: #000;
+        }
+
+        .coming-soon {
+            opacity: 0.5;
+            cursor: default;
+        }
+
+        .coming-soon:hover {
+            transform: none;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border-color: rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Film grain overlay -->
+    <div class="film-grain"></div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-content">
+            <span class="logo">Bembridge Fort Trust</span>
+            <ul class="nav-links">
+                <li><a href="#about">The Project</a></li>
+                <li><a href="#stories">Wartime Stories</a></li>
+                <li><a href="#contact">Get Involved</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="section hero" id="intro">
+        <div class="hero-content fade-in">
+            <div class="date-anchor">Past Futures Initiative</div>
+            <h1 class="title">BEMBRIDGE FORT<br><span class="presents">uncovering</span><br>HIDDEN HISTORIES</h1>
+            <p class="subtitle">Forgotten People, Lost Technologies</p>
+            <div class="scroll-indicator">
+                <span>Discover the Project</span>
+                <div class="arrow"></div>
+            </div>
+        </div>
+        <div class="hero-poster"
+            style="background-image: url('assets/bembridge_fort_hero_1772310109399.png'); opacity: 0.4;"></div>
+        <div class="searchlight"></div>
+    </header>
+
+    <main>
+        <!-- The Project Concept -->
+        <section class="section narrative-section" id="about">
+            <div class="container reverse">
+                <div class="text-content slide-in-left">
+                    <h2>Uncovering Island History</h2>
+                    <p>
+                        A project aiming to uncover the hidden histories of an Isle of Wight fort and its surrounding
+                        defences has received a major funding boost.
+                        The Bembridge Fort Trust, working with the Hampshire and IW Community Foundation and Creative
+                        Island, has launched the ‘Forgotten People, Lost Technologies’ initiative.
+                    </p>
+                    <p>
+                        This project is designed to bring together volunteers, schools, and community groups to explore
+                        the Fort’s rich and secretive past. We focus on the personal stories and technological
+                        innovations that shaped Bembridge Fort’s 150-year history.
+                    </p>
+                    <div class="quote">
+                        <p>“We look forward to recording and hearing your stories and make the past live again. Let us
+                            make sure these stories are never forgotten.”</p>
+                        <p style="font-size: 1rem; color: #a1a1aa; text-align: right; margin-top: 10px;">— David Reeves,
+                            Chair</p>
+                    </div>
+                    <div style="margin-top: 2rem;">
+                        <a href="fort_history.html" class="btn-outline"
+                            style="padding: 1rem 2rem; font-size: 1rem;">Explore the Citadel Through Time</a>
+                    </div>
+                </div>
+                <div class="image-content slide-in-right">
+                    <img src="assets/bembridge_fort_hero_1772310109399.png" alt="Bembridge Fort on Culver Down"
+                        style="filter: brightness(0.8);">
+                    <p class="caption">The imposing Victorian walls of Bembridge Fort</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Untold Stories Section -->
+        <section class="section narrative-section dark-bg" id="stories">
+            <div class="container" style="flex-direction: column; align-items: flex-start;">
+                <div class="text-content slide-in-right" style="width: 100%;">
+                    <h2>Personal Wartime Stories</h2>
+                    <p>
+                        "We hope to share the history of people and events in the context of the unique fort buildings
+                        and its ground-breaking technologies," says trustee and project manager Tim Wander.
+                        "The stories may well include the continual threat of invasion, aerial attack, heartbreak, loss,
+                        and joy."
+                    </p>
+
+                    <div class="cards-grid">
+                        <!-- Card 1: Raymond Edmunds -->
+                        <a href="raymond.html" class="story-card">
+                            <div class="card-image"
+                                style="background-image: url('assets/the_greasepaint_boy_1772309182259.png');"></div>
+                            <div class="card-content">
+                                <h3>The Wonder-Child</h3>
+                                <p>Master Raymond Edmunds brought a touch of Blighty to the troops stationed at
+                                    Bembridge Fort amidst the Blitz.</p>
+                                <span class="btn-outline">Read Story</span>
+                            </div>
+                        </a>
+
+                        <!-- Card 2: Defensive Technologies -->
+                        <a href="wilkes.html" class="story-card">
+                            <div class="card-image" style="background-image: url('assets/Radar building.jpg');"></div>
+                            <div class="card-content">
+                                <h3>Defensive Technologies</h3>
+                                <p>Discover Sir Maurice Wilkes and the ground-breaking defensive technologies developed
+                                    in secret during the Second World War.</p>
+                                <span class="btn-outline">Read Story</span>
+                            </div>
+                        </a>
+
+                        <!-- Card 3: The Garrison Returns -->
+                        <a href="kiddle.html" class="story-card">
+                            <div class="card-image"
+                                style="background-image: url('assets/imagekk.png'); background-position: top;"></div>
+                            <div class="card-content">
+                                <h3>The Garrison Returns</h3>
+                                <p>Tales from Geoffrey Kiddle who manned the anti-submarine watch and military stations
+                                    under the shadow of the Luftwaffe.</p>
+                                <span class="btn-outline">Read Story</span>
+                            </div>
+                        </a>
+
+                        <!-- Card 4: The Fort Cookhouse -->
+                        <a href="dooley.html" class="story-card">
+                            <div class="card-image"
+                                style="background-image: url('assets/tom dooley b est image but not animated.png'); background-position: top;">
+                            </div>
+                            <div class="card-content">
+                                <h3>The Fort Cookhouse</h3>
+                                <p>Explore the culinary history of Bembridge Fort through Thomas "Tim" Dooley, from
+                                    young rating to the Irish Army.</p>
+                                <span class="btn-outline">Read Story</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Get Involved Section -->
+        <section class="section narrative-section" id="contact">
+            <div class="container reverse">
+                <div class="text-content slide-in-left">
+                    <h2>Get Involved</h2>
+                    <p>
+                        Are you an Islander whose ancestors served, worked, or lived near Bembridge Fort, or nearby
+                        military sites? We are calling on you to come forward with any photos, documents, or memories.
+                    </p>
+                    <p>
+                        Free workshops will be set up to record stories, and the team will show visitors how to restore,
+                        colourise, and even animate old photos.
+                    </p>
+                    <div style="margin-top: 2rem;">
+                        <a href="mailto:info@bembridgefort.org" class="btn-outline"
+                            style="padding: 1rem 2rem; font-size: 1rem;">Email: info@bembridgefort.org</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Bembridge Fort Trust | Past Futures Initiative</p>
+        <p class="small-text">Funded by the National Lottery Heritage Fund. © 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
